@@ -1,0 +1,22 @@
+<div *ngIf="isAddingMode" class="new-task__input">
+  <label class="new-task__label" for="new-task">New Task</label>
+  <textarea class="form-control new-task__text"
+            id="new-task"
+            (input)="getNewTask($event.srcElement.value)"></textarea>
+  <button type="button"
+          class="new-task__save-btn btn btn-default"
+          (click)="addTask()"
+          [disabled]="!isNewTaskValid">
+    <span class="glyphicon glyphicon-ok"></span>
+  </button>
+  <button type="button"
+          class="new-task__cancel-btn btn btn-default"
+          (click)="cancelAdding()">
+    <span class="glyphicon glyphicon-remove"></span>
+  </button>
+</div>
+<button *ngIf="!isAddingMode"
+        type="button"
+        class="new-task__add-btn btn btn-default"
+        (click)="startAdding()"        >
+  Add New Task</button>

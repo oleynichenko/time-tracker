@@ -1,0 +1,7 @@
+<section class="tasks-list center-block">
+  <h3 class="task-list__title">Tasks List</h3>
+  <div class="task-list__items">
+    <app-task *ngFor="let task of tasks; let i = index" [task]="task" [index]="i"></app-task>
+  </div>
+  <app-new-task></app-new-task>
+</section>

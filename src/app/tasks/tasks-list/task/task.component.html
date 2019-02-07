@@ -1,0 +1,33 @@
+<section [ngClass]="{
+            'task': true,
+            'task--finished': task.finished
+          }"
+          routerLinkActive="task--active">
+  <p class="task__time">{{task.time | time}}</p>
+  <p *ngIf="!isEditMode">
+    <span class="task__name"
+          [routerLink]="[index]">{{task.name}}</span>
+    <button *ngIf="!task.finished"
+            type="button"
+            class="btn btn-default btn-xs task__edit-btn"
+            (click)="startEditing()">
+      <span class="glyphicon glyphicon-pencil"></span>
+    </button>
+  </p>
+  <p *ngIf="isEditMode" class="task__input">
+    <textarea class="task__input-text form-control"
+              cols="36"
+              (input)="getUpdatedTask($event.srcElement.value)">{{editedTaskName}}</textarea>
+    <button type="button"
+            class="task__update-btn btn btn-default"
+            (click)="updateTask()"
+            [disabled]="!isTaskValid">
+      <span class="glyphicon glyphicon-ok"></span>
+    </button>
+    <button type="button"
+            class="task__cancel-btn btn btn-default"
+            (click)="cancelEditing()">
+      <span class="glyphicon glyphicon-remove"></span>
+    </button>
+  </p>
+</section>

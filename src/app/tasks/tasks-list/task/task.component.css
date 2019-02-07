@@ -1,0 +1,88 @@
+.task {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.task__name {
+  font-size: 20px;
+  outline: none;
+}
+
+.task__time {
+  width: 78px;
+
+  font-size: 20px;
+  margin-right: 16px;
+}
+
+.task__name:hover {
+  cursor: pointer;
+}
+
+.task--active .task__name,
+.task--active .task__time {
+  color: #38af38;
+}
+
+.task--active .task__name {
+  cursor: default;
+}
+
+.task--finished .task__name {
+  text-decoration: line-through;
+}
+
+.task--finished .task__name,
+.task--finished .task__time {
+  color: #bdbdbd;
+}
+
+
+/*buttons*/
+
+.task--active .task__edit-btn {
+  display: none;
+}
+
+.task__edit-btn {
+  margin-left: 8px;
+  outline: none;
+  border: none;
+  vertical-align: text-bottom;
+}
+
+.task__edit-btn:focus,
+.task__update-btn:focus,
+.task__cancel-btn:focus {
+  outline: none;
+}
+
+.task__update-btn {
+  margin-right: 8px;
+  outline: none;
+  /*vertical-align: text-top;*/
+}
+
+.task__cancel-btn {
+  outline: none;
+  /*vertical-align: text-top;*/
+}
+
+.task__input-text {
+  height: 34px;
+  margin-right: 14px;
+
+  overflow: hidden;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.task__input {
+  display: flex;
+  align-items: flex-start;
+}
+
+
+
+

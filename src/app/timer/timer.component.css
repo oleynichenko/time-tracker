@@ -1,0 +1,37 @@
+.timer {
+  width: 425px;
+  margin-bottom: 56px;
+}
+
+.timer__task-title {
+  height: 33px;
+  margin-top: 0;
+  margin-bottom: 24px;
+  overflow: hidden;
+
+  color: #38af38;
+  font-size: 30px;
+}
+
+.timer__task-title--finished {
+  color: #bdbdbd;
+  text-decoration: line-through
+}
+
+.timer__time {
+  margin-bottom: 36px;
+
+  text-align: center;
+  font-size: 108px;
+  line-height: 1;
+}
+
+.timer__btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.timer__btn:focus {
+  outline: none;
+}
+

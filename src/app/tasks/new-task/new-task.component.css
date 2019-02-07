@@ -1,0 +1,35 @@
+.new-task__input {
+  display: flex;
+  align-items: center;
+}
+
+.new-task__label {
+  width: 80px;
+  margin-right: 16px;
+  font-size: 17px;
+  flex-shrink: 0;
+}
+
+.new-task__text {
+  flex-grow: 1;
+  margin-right: 14px;
+  height: 34px;
+  overflow: hidden;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.new-task__add-btn {
+  float: right;
+}
+
+.new-task__save-btn {
+  margin-right: 8px;
+}
+
+.new-task__save-btn:focus,
+.new-task__cancel-btn:focus,
+.new-task__add-btn:focus{
+  outline: none;
+}
+

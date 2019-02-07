@@ -1,0 +1,16 @@
+.tasks-list {
+  position: relative;
+  width: 572px;
+}
+
+.task-list__title {
+  margin-top: 0;
+  margin-bottom: 32px;
+  font-size: 34px;
+}
+
+.task-list__items {
+  margin-bottom: 36px;
+}
+
+
